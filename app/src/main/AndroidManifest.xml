@@ -21,7 +21,7 @@
         <activity
             android:name="br.com.zup.movieflix.ui.register.view.RegisterActivity"
             android:exported="false" />
-        <activity android:name="br.com.zup.movieflix.ui.movielist.view.MovieActivity" />
+        <activity android:name="br.com.zup.movieflix.ui.home.view.HomeActivity" />
         <activity
             android:name=".ui.login.view.LoginActivity"
             android:exported="true">

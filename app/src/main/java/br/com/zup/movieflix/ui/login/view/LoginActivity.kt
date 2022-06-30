@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import br.com.zup.movieflix.databinding.ActivityLoginBinding
 import br.com.zup.movieflix.domain.model.User
-import br.com.zup.movieflix.ui.movielist.view.MovieActivity
+import br.com.zup.movieflix.ui.home.view.HomeActivity
 import br.com.zup.movieflix.ui.login.viewmodel.LoginViewModel
 import br.com.zup.movieflix.ui.register.view.RegisterActivity
 import br.com.zup.movieflix.ui.viewstate.ViewState
@@ -61,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
         viewModel.loginState.observe(this) {
             when (it) {
                 is ViewState.Success -> {
-                    startActivity(Intent(this, MovieActivity::class.java))
+                    startActivity(Intent(this, HomeActivity::class.java))
                     finish()
                 }
 
