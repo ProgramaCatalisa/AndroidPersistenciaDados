@@ -14,6 +14,7 @@ import br.com.zup.movieflix.MOVIE_KEY
 import br.com.zup.movieflix.R
 import br.com.zup.movieflix.databinding.FragmentMovieListBinding
 import br.com.zup.movieflix.domain.model.Movie
+import br.com.zup.movieflix.ui.home.view.HomeActivity
 import br.com.zup.movieflix.ui.movielist.viewmodel.MovieViewModel
 import br.com.zup.movieflix.ui.viewstate.ViewState
 
@@ -39,6 +40,7 @@ class MovieListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as HomeActivity).supportActionBar?.title = getString(R.string.movie_title_menu)
         viewModel.getMovieList()
         initObserver()
         setUpRvMovieList()

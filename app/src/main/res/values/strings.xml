@@ -24,6 +24,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="salvar_login_e_senha">Salvar Login e Senha</string>
     <string name="movie_title_menu">Filmes</string>
+    <string name="movie_title_detail">Detalhe</string>
     <string name="movie_add_title_menu">Novo Filme</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
