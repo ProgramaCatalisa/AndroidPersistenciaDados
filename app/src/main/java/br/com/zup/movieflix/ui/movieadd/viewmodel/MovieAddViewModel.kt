@@ -1,4 +1,4 @@
-package br.com.zup.movieflix.ui.movielist.viewmodel
+package br.com.zup.movieflix.ui.movieadd.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -11,19 +11,19 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class MovieViewModel(application: Application) : AndroidViewModel(application) {
+class MovieAddViewModel(application: Application) : AndroidViewModel(application) {
     private val movieUseCase = MovieUseCase(application)
-    val movieListState = MutableLiveData<ViewState<List<Movie>>>()
+    val movieAddState = MutableLiveData<ViewState<Movie>>()
 
-    fun getMovieList() {
+    fun insertMovie(movie: Movie) {
         viewModelScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
-                    movieUseCase.getAllMovies()
+                    movieUseCase.insertMovie(movie)
                 }
-                movieListState.value = response
+                movieAddState.value = response
             } catch (ex: Exception) {
-                movieListState.value =
+                movieAddState.value =
                     ViewState.Error(Throwable("Tivemos um problema! Tente mais tarde."))
             }
         }

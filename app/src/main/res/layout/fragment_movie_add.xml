@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.movieadd.MovieAddFragment">
+    tools:context=".ui.movieadd.view.MovieAddFragment">
 
     <EditText
         android:id="@+id/etMovieTitleAdd"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etMovieDirectorNameAdd" />
 
     <Button
-        android:id="@+id/bvLogin"
+        android:id="@+id/bvSaveMovie"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"

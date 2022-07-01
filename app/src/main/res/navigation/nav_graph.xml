@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/movieAddFragment"
-        android:name="br.com.zup.movieflix.ui.movieadd.MovieAddFragment"
+        android:name="br.com.zup.movieflix.ui.movieadd.view.MovieAddFragment"
         android:label="Cadastro"
         tools:layout="@layout/fragment_movie_add" />
     <fragment
