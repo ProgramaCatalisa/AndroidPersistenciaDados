@@ -49,7 +49,7 @@ class MovieListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.getMovieList()
+        viewModel.getAllMovies()
     }
 
     private fun initObserver() {

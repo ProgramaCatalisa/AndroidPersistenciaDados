@@ -20,7 +20,7 @@ data class Movie(
     @ColumnInfo(name = "sinopse")
     var sinopse: String,
 
-    var image: Int,
+    var image: Int = 0,
 
     @ColumnInfo(name = "diretores")
     var director: Director,

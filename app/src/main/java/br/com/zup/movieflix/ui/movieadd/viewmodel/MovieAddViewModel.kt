@@ -1,9 +1,8 @@
-package br.com.zup.movieflix.ui.movielist.viewmodel
+package br.com.zup.movieflix.ui.movieadd.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.zup.movieflix.domain.model.Movie
 import br.com.zup.movieflix.domain.usecase.MovieUseCase
@@ -12,21 +11,22 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class MovieViewModel(application: Application) : AndroidViewModel(application) {
+class MovieAddViewModel(application: Application) : AndroidViewModel(application) {
     private val movieUseCase = MovieUseCase(application)
-    val movieListState = MutableLiveData<ViewState<List<Movie>>>()
+    val movieAddState = MutableLiveData<ViewState<Movie>>()
 
-    fun getAllMovies() {
+    fun insertMovie(movie: Movie) {
         viewModelScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
-                    movieUseCase.getAllMovies()
+                    movieUseCase.insertMovie(movie)
                 }
-                movieListState.value = response
+                movieAddState.value = response
             } catch (ex: Exception) {
-                movieListState.value =
-                    ViewState.Error(Throwable("Não foi possível carregar a lista!"))
+                movieAddState.value =
+                    ViewState.Error(Throwable("Não foi possível inserir o filme!"))
             }
         }
     }
+
 }
