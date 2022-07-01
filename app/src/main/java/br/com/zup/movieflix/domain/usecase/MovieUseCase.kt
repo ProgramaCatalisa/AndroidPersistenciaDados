@@ -7,7 +7,7 @@ import br.com.zup.movieflix.domain.model.Director
 import br.com.zup.movieflix.domain.model.Movie
 import br.com.zup.movieflix.ui.viewstate.ViewState
 
-class GetMovieListUseCase {
+class MovieUseCase {
 
     fun getMovieList(): LiveData<ViewState<List<Movie>>> {
         val response = MutableLiveData<ViewState<List<Movie>>>()
