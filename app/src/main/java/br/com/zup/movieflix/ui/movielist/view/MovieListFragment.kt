@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.withStateAtLeast
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.zup.movieflix.MOVIE_KEY
@@ -17,7 +20,6 @@ import br.com.zup.movieflix.domain.model.Movie
 import br.com.zup.movieflix.ui.home.view.HomeActivity
 import br.com.zup.movieflix.ui.movielist.viewmodel.MovieViewModel
 import br.com.zup.movieflix.ui.viewstate.ViewState
-
 
 class MovieListFragment : Fragment() {
     private lateinit var binding: FragmentMovieListBinding
@@ -41,13 +43,18 @@ class MovieListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as HomeActivity).supportActionBar?.title = getString(R.string.movie_title_menu)
-        viewModel.getMovieList()
         initObserver()
         setUpRvMovieList()
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.getMovieList()
+    }
+
     private fun initObserver() {
         viewModel.movieListState.observe(this.viewLifecycleOwner) {
+
             when (it) {
                 is ViewState.Success -> {
                     adapter.updateMovieList(it.data)

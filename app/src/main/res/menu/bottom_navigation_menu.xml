@@ -1,11 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menuMovieList"
+        android:id="@+id/movieListFragment"
         android:enabled="true"
         android:icon="@drawable/ic_movie"
         android:title="@string/movie_title_menu"/>
     <item
-        android:id="@+id/menuMovieAdd"
+        android:id="@+id/movieAddFragment"
         android:enabled="true"
         android:icon="@drawable/ic_movie_add"
         android:title="@string/movie_add_title_menu"/>
