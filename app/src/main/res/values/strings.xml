@@ -28,4 +28,9 @@
     <string name="movie_add_title_menu">Novo Filme</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movie_name_add">Nome do filme</string>
+    <string name="movie_sinopse_add">Sinopse do filme</string>
+    <string name="movie_director_add">Nome do diretor</string>
+    <string name="movie_director_info_add">Informações do diretor</string>
+    <string name="save_movie">Cadastrar filme</string>
 </resources>

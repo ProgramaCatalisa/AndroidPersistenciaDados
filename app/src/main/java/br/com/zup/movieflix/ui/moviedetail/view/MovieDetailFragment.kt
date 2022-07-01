@@ -2,12 +2,10 @@ package br.com.zup.movieflix.ui.moviedetail.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.zup.movieflix.MOVIE_KEY
-import br.com.zup.movieflix.R
 import br.com.zup.movieflix.databinding.FragmentMovieDetailBinding
 import br.com.zup.movieflix.domain.model.Movie
 import br.com.zup.movieflix.ui.home.view.HomeActivity
