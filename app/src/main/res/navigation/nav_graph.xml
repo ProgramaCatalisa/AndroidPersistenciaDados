@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/movieListFragment"
         android:name="br.com.zup.movieflix.ui.movielist.view.MovieListFragment"
-        android:label="fragment_movie_list"
+        android:label="Filmes"
         tools:layout="@layout/fragment_movie_list" >
         <action
             android:id="@+id/action_movieListFragment_to_movieDetailFragment"
@@ -18,11 +18,11 @@
     <fragment
         android:id="@+id/movieAddFragment"
         android:name="br.com.zup.movieflix.ui.movieadd.MovieAddFragment"
-        android:label="fragment_movie_add"
+        android:label="Cadastro"
         tools:layout="@layout/fragment_movie_add" />
     <fragment
         android:id="@+id/movieDetailFragment"
         android:name="br.com.zup.movieflix.ui.moviedetail.view.MovieDetailFragment"
-        android:label="fragment_movie_list"
+        android:label="Detalhe"
         tools:layout="@layout/fragment_movie_list" />
 </navigation>
