@@ -25,6 +25,5 @@ data class Movie(
     @ColumnInfo(name = "diretores")
     var director: Director,
 
-    @ColumnInfo(name = "favoritado")
     var isFavorite: Boolean = false
 ) : Parcelable
